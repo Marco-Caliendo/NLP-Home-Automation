@@ -26,7 +26,7 @@ with sr.Microphone() as source:
 
 # Listen for the wake word
 def listening(wake_word):
-    recognize.pause_threshold = 0.5
+    recognize.pause_threshold = 1
     try:
         with sr.Microphone() as source:
             print("Listening")

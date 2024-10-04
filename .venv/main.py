@@ -8,10 +8,10 @@ from gpt import ai
 wake_word = 'computer'
 
 
-# For debugging and avoiding the wake word requirement
-def debug():
+# For debugging and avoiding speech to text
+def text_only():
     while True:
-        command = get_command()
+        command = input("User Input: ")
         ai(command)
 
 def main():
@@ -24,5 +24,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-    #debug()
+    #main()
+    text_only()

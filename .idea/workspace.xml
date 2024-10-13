@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="changed debug to text only functionality">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/gpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/gpt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="Added sentence classification model to direct command to either gpt model or automation module" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,24 +48,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.command_classification.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.nlp_HA_test.executor": "Run",
-    "Python.nlp_test.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "test",
-    "last_opened_file_path": "C:/Users/calie/PycharmProjects/NLP_Home_Automation/.venv",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.command_classification.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.nlp_HA_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.nlp_test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;test&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/calie/PycharmProjects/NLP_Home_Automation/.venv&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\calie\PycharmProjects\NLP_Home_Automation\.venv" />
@@ -134,7 +130,7 @@
       <workItem from="1728248869006" duration="2047000" />
       <workItem from="1728262627812" duration="96000" />
       <workItem from="1728325677715" duration="6000" />
-      <workItem from="1728769213284" duration="884000" />
+      <workItem from="1728769213284" duration="1018000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -176,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728004428583</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added sentence classification model to direct command to either gpt model or automation module">
+      <option name="closed" value="true" />
+      <created>1728770213207</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728770213207</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,7 +203,8 @@
     <MESSAGE value="added gpt-2 support" />
     <MESSAGE value="added debug function to main" />
     <MESSAGE value="changed debug to text only functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed debug to text only functionality" />
+    <MESSAGE value="Added sentence classification model to direct command to either gpt model or automation module" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sentence classification model to direct command to either gpt model or automation module" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$nlp_test.coverage" NAME="nlp_test Coverage Results" MODIFIED="1727841012545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />

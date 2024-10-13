@@ -1,8 +1,7 @@
-#from xml.etree.ElementInclude import include
-
 from voice import response, listening, get_command
 from gpt import ai
 from command_classification import comclass
+
 
 # Wake word is currently changed here
 wake_word = 'computer'
@@ -12,7 +11,10 @@ wake_word = 'computer'
 def system_commands(input):
     match input:
         case "exit":
-            sys.exit()
+            quit()
+        case "system command":
+            print("Executing system command : " + input)
+            return 1
         case _:
             return 0
 
@@ -23,19 +25,21 @@ def text_only():
         # Get the command
         command = input("User Input: ")
 
-        # Check if input is a system defined command
-        if system_commands(command) == 0:
-            # Is the input an automation command or a conversational input
-            command_class = comclass(command)[0]
-            # If conversation, send to AI chat module, else ,if automation, execute automation command, else return error
-            if command_class == "CONVERSATION":
-                ai(command)
-            elif command_class == "AUTOMATION":
-                print("Executing command : " + command)
-            else:
-                print("Error")
+        # Check if input is a system defined command, if it is, skip the rest of the command loop
+        if system_commands(command) != 0:
+            continue
+
+        # Is the input an automation command or a conversational input
+        command_class = comclass(command)[0]
+
+        # If conversation, send to AI chat module, else ,if automation, execute automation command, else return error
+        if command_class == "CONVERSATION":
+            ai(command)
+        elif command_class == "AUTOMATION":
+            print("Executing command : " + command)
         else:
-            print("Executing System Command : " + command)
+            print("Error")
+
 
 
 # Main function that calls the speach to text module
@@ -45,19 +49,21 @@ def main():
             # Get the command
             command = get_command()
 
-            # Check if input is a system defined command
-            if system_commands(command) == 0:
-                # Is the input an automation command or a conversational input
-                command_class = comclass(command)[0]
-                # If conversation, send to AI chat module, else ,if automation, execute automation command, else return error
-                if command_class == "CONVERSATION":
-                    ai(command)
-                elif command_class == "AUTOMATION":
-                    print("Executing command : " + command)
-                else:
-                    print("Error")
-        else:
-            print("Executing System Command : " + command)
+            # Check if input is a system defined command, if it is, skip the rest of the command loop
+            if system_commands(command) != 0:
+                continue
+
+            # Is the input an automation command or a conversational input
+            command_class = comclass(command)[0]
+
+            # If conversation, send to AI chat module, else ,if automation, execute automation command, else return error
+            if command_class == "CONVERSATION":
+                ai(command)
+            elif command_class == "AUTOMATION":
+                print("Executing command : " + command)
+            else:
+                print("Error")
+
 
 
 

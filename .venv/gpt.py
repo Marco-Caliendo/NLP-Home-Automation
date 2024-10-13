@@ -3,7 +3,11 @@ import torch
 
 
 tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-large")
-model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-large")
+model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-large", )
+
+# Set the pad_token to something different than eos_token if they are the same
+if tokenizer.pad_token_id is None:
+    tokenizer.pad_token = tokenizer.eos_token  # Set pad_token to eos_token if not defined
 
 first_input = True
 
@@ -15,11 +19,17 @@ def ai(speech):
     bot_input_ids = torch.cat([chat_history_ids, new_user_input_ids], dim=-1) if first_input == False else new_user_input_ids
     #bot_input_ids = new_user_input_ids
 
-    # generated a response while limiting the total chat history to 1000 tokens,
-    chat_history_ids = model.generate(bot_input_ids, max_length=1000, pad_token_id=tokenizer.eos_token_id)
+    # Create the attention mask (1 for tokens to attend to, 0 for padding)
+    attention_mask = torch.ones(bot_input_ids.shape, dtype=torch.long)
 
-    # pretty print last ouput tokens from bot
-    print("Bot: {}".format(tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)))
+    # Generate a response while limiting the total chat history to 1000 tokens
+    chat_history_ids = model.generate(
+        bot_input_ids,
+        max_length=1000,
+        pad_token_id=tokenizer.pad_token_id,  # Use the pad_token_id explicitly
+        attention_mask=attention_mask
+    )
 
-    return  format(tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True))
-
+    # Print last output tokens from bot
+    bot_response = tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
+    print("Bot: {}".format(bot_response))

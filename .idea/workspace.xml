@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="fixed mistakes">
-      <change afterPath="$PROJECT_DIR$/.venv/testing/entities_intents_dataset.csv" afterDir="false" />
+    <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="failed intent prediction experiment. Training reports high accuracy, but fails under new data. Likely overfitting.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/voice.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/voice.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +62,8 @@
     "Python.nlp_test.executor": "Run",
     "Python.test.executor": "Run",
     "Python.tools.executor": "Run",
+    "Python.wakeword.executor": "Run",
+    "Python.wakeword_testing.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "test",
@@ -76,8 +79,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\calie\PycharmProjects\NLP_Home_Automation\.venv\testing" />
-      <recent name="C:\Users\calie\PycharmProjects\NLP_Home_Automation\.venv\Sentence_Classification_Model" />
       <recent name="C:\Users\calie\PycharmProjects\NLP_Home_Automation\.venv" />
+      <recent name="C:\Users\calie\PycharmProjects\NLP_Home_Automation\.venv\Sentence_Classification_Model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\calie\PycharmProjects\NLP_Home_Automation\.venv" />
@@ -145,7 +148,8 @@
       <workItem from="1728769213284" duration="1018000" />
       <workItem from="1728784089675" duration="8282000" />
       <workItem from="1728839952996" duration="3356000" />
-      <workItem from="1728846523521" duration="1682000" />
+      <workItem from="1728846523521" duration="1904000" />
+      <workItem from="1728849631997" duration="5814000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -259,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728792101576</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="failed intent prediction experiment. Training reports high accuracy, but fails under new data. Likely overfitting.">
+      <option name="closed" value="true" />
+      <created>1728848344928</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1728848344928</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,16 +301,19 @@
     <MESSAGE value="more junk cleanup" />
     <MESSAGE value="fixed some bugs" />
     <MESSAGE value="fixed mistakes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed mistakes" />
+    <MESSAGE value="failed intent prediction experiment. Training reports high accuracy, but fails under new data. Likely overfitting." />
+    <option name="LAST_COMMIT_MESSAGE" value="failed intent prediction experiment. Training reports high accuracy, but fails under new data. Likely overfitting." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$Entities_Intents.coverage" NAME="Entities_Intents Coverage Results" MODIFIED="1728843299432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$model_trainer.coverage" NAME="model_trainer Coverage Results" MODIFIED="1728790120820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Sentence_Classification_Model" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$nlp_test.coverage" NAME="nlp_test Coverage Results" MODIFIED="1727841012545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$test.coverage" NAME="test Coverage Results" MODIFIED="1728848133283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
+    <SUITE FILE_PATH="coverage/NLP_Home_Automation$wakeword.coverage" NAME="wakeword Coverage Results" MODIFIED="1728853166281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$nlp_HA_test.coverage" NAME="nlp_HA_test Coverage Results" MODIFIED="1727845106339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$tools.coverage" NAME="tools Coverage Results" MODIFIED="1728847170231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
-    <SUITE FILE_PATH="coverage/NLP_Home_Automation$main.coverage" NAME="main Coverage Results" MODIFIED="1728791992487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
+    <SUITE FILE_PATH="coverage/NLP_Home_Automation$main.coverage" NAME="main Coverage Results" MODIFIED="1728855437857" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
+    <SUITE FILE_PATH="coverage/NLP_Home_Automation$wakeword_testing.coverage" NAME="wakeword_testing Coverage Results" MODIFIED="1728853591326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$command_classification.coverage" NAME="command_classification Coverage Results" MODIFIED="1728789812597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
   </component>
 </project>

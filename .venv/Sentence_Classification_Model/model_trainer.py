@@ -134,5 +134,5 @@ print(model)
 export_model_script = torch.jit.script(model)
 export_model_script.save('command_classifier.pt')
 # Save the word_to_ix mapping to a file
-with open("word_to_ix.txt", "w") as f:
+with open("comclass_vocab.txt", "w") as f:
     f.write(str(word_to_ix))

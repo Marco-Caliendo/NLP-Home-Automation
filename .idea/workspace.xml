@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="added debug function to main" />
+    <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="Added sentence classification model to direct command to either gpt model or automation module" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,13 +50,14 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.command_classification.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.nlp_HA_test.executor&quot;: &quot;Run&quot;,
     &quot;Python.nlp_test.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;test&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/calie/PycharmProjects/NLP_Home_Automation/.venv/testing&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/calie/PycharmProjects/NLP_Home_Automation/.venv&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -68,6 +69,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\calie\PycharmProjects\NLP_Home_Automation\.venv" />
+      <recent name="C:\Users\calie\PycharmProjects\NLP_Home_Automation\.venv\Sentence_Classification_Model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\calie\PycharmProjects\NLP_Home_Automation\.venv\testing" />
@@ -123,7 +125,12 @@
       <workItem from="1727809644749" duration="594000" />
       <workItem from="1727815261985" duration="15254000" />
       <workItem from="1727985181605" duration="787000" />
-      <workItem from="1728000915571" duration="2373000" />
+      <workItem from="1728000915571" duration="4234000" />
+      <workItem from="1728148795109" duration="34000" />
+      <workItem from="1728248869006" duration="2047000" />
+      <workItem from="1728262627812" duration="96000" />
+      <workItem from="1728325677715" duration="6000" />
+      <workItem from="1728769213284" duration="1018000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -157,7 +164,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728003732214</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="changed debug to text only functionality">
+      <option name="closed" value="true" />
+      <created>1728004428583</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728004428583</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added sentence classification model to direct command to either gpt model or automation module">
+      <option name="closed" value="true" />
+      <created>1728770213207</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728770213207</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,11 +202,14 @@
     <MESSAGE value="removed nlp_test.py" />
     <MESSAGE value="added gpt-2 support" />
     <MESSAGE value="added debug function to main" />
-    <option name="LAST_COMMIT_MESSAGE" value="added debug function to main" />
+    <MESSAGE value="changed debug to text only functionality" />
+    <MESSAGE value="Added sentence classification model to direct command to either gpt model or automation module" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added sentence classification model to direct command to either gpt model or automation module" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$nlp_test.coverage" NAME="nlp_test Coverage Results" MODIFIED="1727841012545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$nlp_HA_test.coverage" NAME="nlp_HA_test Coverage Results" MODIFIED="1727845106339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
-    <SUITE FILE_PATH="coverage/NLP_Home_Automation$main.coverage" NAME="main Coverage Results" MODIFIED="1728001945948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
+    <SUITE FILE_PATH="coverage/NLP_Home_Automation$main.coverage" NAME="main Coverage Results" MODIFIED="1728770022603" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
+    <SUITE FILE_PATH="coverage/NLP_Home_Automation$command_classification.coverage" NAME="command_classification Coverage Results" MODIFIED="1728769348936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
   </component>
 </project>

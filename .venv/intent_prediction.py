@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score  # Import accuracy_score
@@ -17,10 +17,18 @@ vectorizer = CountVectorizer()
 X = vectorizer.fit_transform(sentences)
 
 # Split the data
-X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.2, random_state=42, stratify=labels)
 
-# Train a Naive Bayes classifier
-model = MultinomialNB()
+# Check class distribution
+class_distribution = data['intent'].value_counts()
+print(f'Class distribution:\n{class_distribution}')
+
+# Define hyperparameters for Grid Search
+parameters = {'alpha': [0.1, 0.5, 1.0]}
+
+# Use StratifiedKFold with GridSearchCV to maintain class proportions
+cv = StratifiedKFold(n_splits=3)  # Adjust n_splits as needed
+model = GridSearchCV(MultinomialNB(), parameters, cv=cv)
 model.fit(X_train, y_train)
 
 # Make predictions on the test set
@@ -36,6 +44,6 @@ def predict_intent(command):
     return model.predict(command_vec)[0]
 
 # Example prediction
-command = "Turn on the living room lights."
+command = "dim the lights"
 predicted_intent = predict_intent(command)
-print(predicted_intent)  # Output: 'turn_on'
+print(predicted_intent)  # Output the predicted intent

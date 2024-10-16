@@ -1,4 +1,4 @@
-from voice import response, listening, get_command
+from voice import listening, get_command
 from gpt import ai
 from command_classification import comclass
 
@@ -41,7 +41,6 @@ def text_only():
             print("Error")
 
 
-
 # Main function that calls the speach to text module
 def main():
     while True:
@@ -58,11 +57,13 @@ def main():
 
             # If conversation, send to AI chat module, else ,if automation, execute automation command, else return error
             if command_class == "CONVERSATION":
+                print(command)
                 ai(command)
             elif command_class == "AUTOMATION":
                 print("Executing command : " + command)
             else:
                 print("Error")
+
 
 
 

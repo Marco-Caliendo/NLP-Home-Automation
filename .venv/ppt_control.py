@@ -1,4 +1,5 @@
 import win32com.client
+import pythoncom
 
 
 # Start PowerPoint application
@@ -37,5 +38,7 @@ class PPT:
         # Close the presentation after the slideshow
         if self.presentation:
             self.presentation.Close()
+            self.presentation = None
         # Quit PowerPoint
         ppt_app.Quit()
+        pythoncom.CoUninitialize()  # Clean up COM object

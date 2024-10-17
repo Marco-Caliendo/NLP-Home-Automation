@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="Added entity_finder, gave ability to &quot;control&quot; powerpoint">
-      <change afterPath="$PROJECT_DIR$/.venv/ppt_control.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/keyboard_output.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/main.py" afterDir="false" />
+    <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="Now has ability to control power point presentations">
+      <change beforePath="$PROJECT_DIR$/.venv/ppt_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/ppt_control.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +180,7 @@
       <workItem from="1729046243738" duration="2179000" />
       <workItem from="1729111368230" duration="482000" />
       <workItem from="1729129017566" duration="2048000" />
-      <workItem from="1729131191425" duration="2268000" />
+      <workItem from="1729131191425" duration="2490000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -337,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729130764347</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Now has ability to control power point presentations">
+      <option name="closed" value="true" />
+      <created>1729133538972</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1729133538972</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +377,8 @@
     <MESSAGE value="Intent Classification working at 67% accuracy. Moved out of testing folder as it seems promising" />
     <MESSAGE value="Intent Classification working at 97% accuracy now. Also shows where dataset is lacking" />
     <MESSAGE value="Added entity_finder, gave ability to &quot;control&quot; powerpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added entity_finder, gave ability to &quot;control&quot; powerpoint" />
+    <MESSAGE value="Now has ability to control power point presentations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now has ability to control power point presentations" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$Entities_Intents.coverage" NAME="Entities_Intents Coverage Results" MODIFIED="1728843299432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
@@ -385,7 +391,7 @@
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$tools.coverage" NAME="tools Coverage Results" MODIFIED="1728847170231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$enitity_finder.coverage" NAME="enitity_finder Coverage Results" MODIFIED="1729130958547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$nlp_HA_test.coverage" NAME="nlp_HA_test Coverage Results" MODIFIED="1727845106339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
-    <SUITE FILE_PATH="coverage/NLP_Home_Automation$main.coverage" NAME="main Coverage Results" MODIFIED="1729133440344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
+    <SUITE FILE_PATH="coverage/NLP_Home_Automation$main.coverage" NAME="main Coverage Results" MODIFIED="1729133630818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$wakeword_testing.coverage" NAME="wakeword_testing Coverage Results" MODIFIED="1728853591326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$keyboard_output.coverage" NAME="keyboard_output Coverage Results" MODIFIED="1729131475707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$command_classification.coverage" NAME="command_classification Coverage Results" MODIFIED="1728789812597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />

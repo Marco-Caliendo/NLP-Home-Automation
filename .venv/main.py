@@ -1,22 +1,11 @@
 from voice import listening, get_command
 from gpt import ai
 from command_classification import comclass
+import system_commands as sc
 
 
 # Wake word is currently changed here
 wake_word = 'computer'
-
-
-# System defined commands. Returns 0 if input is not a system command
-def system_commands(input):
-    match input:
-        case "exit":
-            quit()
-        case "system command":
-            print("Executing system command : " + input)
-            return 1
-        case _:
-            return 0
 
 
 # For testing and avoiding speech to text
@@ -26,7 +15,7 @@ def text_only():
         command = input("User Input: ")
 
         # Check if input is a system defined command, if it is, skip the rest of the command loop
-        if system_commands(command) != 0:
+        if sc.system_commands(command) != 0:
             continue
 
         # Is the input an automation command or a conversational input
@@ -49,7 +38,7 @@ def main():
             command = get_command()
 
             # Check if input is a system defined command, if it is, skip the rest of the command loop
-            if system_commands(command) != 0:
+            if sc.system_commands(command) != 0:
                 continue
 
             # Is the input an automation command or a conversational input

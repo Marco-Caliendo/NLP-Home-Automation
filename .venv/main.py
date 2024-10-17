@@ -1,11 +1,14 @@
 from voice import listening, get_command
 from gpt import ai
 from command_classification import comclass
-import keyboard_output as key
+import ppt_control as ppt
 
 
 # Wake word is currently changed here
 wake_word = 'computer'
+# Current path to power point loaded in system
+path = r"C:\Users\calie\PycharmProjects\NLP_Home_Automation\.venv\Sprint_1_Fall_2024.pptx"
+presentation = ppt.PPT()
 
 
 # System defined commands. Returns 0 if input is not a system command
@@ -16,10 +19,14 @@ def system_commands(input):
         case "system command":
             print("Executing system command : " + input)
             return 1
+        case "open presentation":
+            presentation.open_presentation(path)
         case "next slide":
-            key.next_slide()
+            presentation.next_slide()
         case "previous slide":
-            key.previous_slide()
+            presentation.prev_slide()
+        case "end presentation":
+            presentation.end_presentation()
         case _:
             return 0
 
@@ -74,5 +81,5 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
-    #text_only()
+    #main()
+    text_only()

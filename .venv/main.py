@@ -1,6 +1,7 @@
 from voice import listening, get_command
 from gpt import ai
 from command_classification import comclass
+import keyboard_output as key
 
 
 # Wake word is currently changed here
@@ -15,6 +16,10 @@ def system_commands(input):
         case "system command":
             print("Executing system command : " + input)
             return 1
+        case "next slide":
+            key.next_slide()
+        case "previous slide":
+            key.previous_slide()
         case _:
             return 0
 
@@ -69,5 +74,5 @@ def main():
 
 
 if __name__ == "__main__":
-    #main()
-    text_only()
+    main()
+    #text_only()

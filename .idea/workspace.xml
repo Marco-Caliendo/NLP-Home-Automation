@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="Now has ability to control power point presentations">
-      <change afterPath="$PROJECT_DIR$/.venv/system_commands.py" afterDir="false" />
+    <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="Fixed some bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/ppt_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/ppt_control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/intent_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/intent_prediction.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,35 +51,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Entities_Intents.executor": "Run",
-    "Python.command_classification.executor": "Run",
-    "Python.enitity_finder.executor": "Run",
-    "Python.intent_prediction.executor": "Run",
-    "Python.intent_prediction2.executor": "Run",
-    "Python.keyboard_output.executor": "Run",
-    "Python.main.executor": "Run",
-    "Python.model_trainer.executor": "Run",
-    "Python.nlp_HA_test.executor": "Run",
-    "Python.nlp_test.executor": "Run",
-    "Python.ppt_control.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.tools.executor": "Run",
-    "Python.wakeword.executor": "Run",
-    "Python.wakeword_testing.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "test",
-    "last_opened_file_path": "C:/Users/calie/PycharmProjects/NLP_Home_Automation/.venv/testing",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Entities_Intents.executor&quot;: &quot;Run&quot;,
+    &quot;Python.command_classification.executor&quot;: &quot;Run&quot;,
+    &quot;Python.enitity_finder.executor&quot;: &quot;Run&quot;,
+    &quot;Python.intent_prediction.executor&quot;: &quot;Run&quot;,
+    &quot;Python.intent_prediction2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.keyboard_output.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.model_trainer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.nlp_HA_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.nlp_test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ppt_control.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tools.executor&quot;: &quot;Run&quot;,
+    &quot;Python.wakeword.executor&quot;: &quot;Run&quot;,
+    &quot;Python.wakeword_testing.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;test&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/calie/PycharmProjects/NLP_Home_Automation/.venv/testing&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\calie\PycharmProjects\NLP_Home_Automation\.venv\testing" />
@@ -183,7 +181,9 @@
       <workItem from="1729046243738" duration="2179000" />
       <workItem from="1729111368230" duration="482000" />
       <workItem from="1729129017566" duration="2048000" />
-      <workItem from="1729131191425" duration="5311000" />
+      <workItem from="1729131191425" duration="5744000" />
+      <workItem from="1729190147630" duration="26000" />
+      <workItem from="1729208663371" duration="215000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -353,7 +353,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729133713844</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fixed some bugs">
+      <option name="closed" value="true" />
+      <created>1729136566983</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1729136566983</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,17 +397,18 @@
     <MESSAGE value="Intent Classification working at 97% accuracy now. Also shows where dataset is lacking" />
     <MESSAGE value="Added entity_finder, gave ability to &quot;control&quot; powerpoint" />
     <MESSAGE value="Now has ability to control power point presentations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now has ability to control power point presentations" />
+    <MESSAGE value="Fixed some bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some bugs" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$Entities_Intents.coverage" NAME="Entities_Intents Coverage Results" MODIFIED="1728843299432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$model_trainer.coverage" NAME="model_trainer Coverage Results" MODIFIED="1728790120820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Sentence_Classification_Model" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$nlp_test.coverage" NAME="nlp_test Coverage Results" MODIFIED="1727841012545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
-    <SUITE FILE_PATH="coverage/NLP_Home_Automation$intent_prediction.coverage" NAME="intent_prediction Coverage Results" MODIFIED="1729047826357" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
+    <SUITE FILE_PATH="coverage/NLP_Home_Automation$intent_prediction.coverage" NAME="intent_prediction Coverage Results" MODIFIED="1729208841505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$test.coverage" NAME="test Coverage Results" MODIFIED="1728848133283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$wakeword.coverage" NAME="wakeword Coverage Results" MODIFIED="1728853166281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
-    <SUITE FILE_PATH="coverage/NLP_Home_Automation$intent_prediction2.coverage" NAME="intent_prediction2 Coverage Results" MODIFIED="1729046877648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$tools.coverage" NAME="tools Coverage Results" MODIFIED="1728847170231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
+    <SUITE FILE_PATH="coverage/NLP_Home_Automation$intent_prediction2.coverage" NAME="intent_prediction2 Coverage Results" MODIFIED="1729046877648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$enitity_finder.coverage" NAME="enitity_finder Coverage Results" MODIFIED="1729130958547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$nlp_HA_test.coverage" NAME="nlp_HA_test Coverage Results" MODIFIED="1727845106339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$main.coverage" NAME="main Coverage Results" MODIFIED="1729136495160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />

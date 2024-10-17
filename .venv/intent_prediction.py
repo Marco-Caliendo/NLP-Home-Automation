@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split, StratifiedKFold, GridSearchCV
+from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import accuracy_score  # Import accuracy_score
@@ -23,12 +23,10 @@ X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.2, ra
 class_distribution = data['intent'].value_counts()
 print(f'Class distribution:\n{class_distribution}')
 
-# Define hyperparameters for Grid Search
-parameters = {'alpha': [0.1, 0.5, 1.0]}
+# Initialize the model with default parameters
+model = MultinomialNB()
 
-# Use StratifiedKFold with GridSearchCV to maintain class proportions
-cv = StratifiedKFold(n_splits=3)  # Adjust n_splits as needed
-model = GridSearchCV(MultinomialNB(), parameters, cv=cv)
+# Fit the model to the training data
 model.fit(X_train, y_train)
 
 # Make predictions on the test set
@@ -36,7 +34,8 @@ y_pred = model.predict(X_test)
 
 # Calculate accuracy
 accuracy = accuracy_score(y_test, y_pred)
-print(f'Accuracy: {accuracy:.2f}')  # Output the accuracy
+# Output the accuracy
+print(f'Accuracy: {accuracy:.2f}')
 
 # Function to predict intent
 def predict_intent(command):

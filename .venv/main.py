@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from voice import listening, get_command
 from gpt import ai
 from command_classification import comclass

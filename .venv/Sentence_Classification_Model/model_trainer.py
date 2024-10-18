@@ -6,12 +6,11 @@ import torch.nn.functional as F
 import torch.optim as optim
 import random
 import ast
+import pandas as pd
 #%%
 # Function to load data from the data file
 def load_data(filename):
-    with open(filename, "r") as file:
-        content = file.read().strip()
-        data = ast.literal_eval(content)
+    data = pd.read_csv(filename)
     return data
 
 # Define the path to the dataset file

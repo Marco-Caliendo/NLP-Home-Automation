@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import ppt_control as ppt
 
 # Current path to power point loaded in system

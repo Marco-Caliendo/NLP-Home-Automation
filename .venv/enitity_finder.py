@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import re
 import nltk
 from nltk import word_tokenize, pos_tag

@@ -6,7 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="Fixed some bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/Sentence_Classification_Model/model_trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/Sentence_Classification_Model/model_trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/command_classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/command_classification.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/enitity_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/enitity_finder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/gpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/gpt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.venv/intent_prediction.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/intent_prediction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/ppt_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/ppt_control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/system_commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/system_commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/testing/nlp_test.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/voice.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/voice.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +192,7 @@
       <workItem from="1729129017566" duration="2048000" />
       <workItem from="1729131191425" duration="5744000" />
       <workItem from="1729190147630" duration="26000" />
-      <workItem from="1729208663371" duration="215000" />
+      <workItem from="1729208663371" duration="3443000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -361,7 +370,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729136566983</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Fixed some bugs">
+      <option name="closed" value="true" />
+      <created>1729208886895</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1729208886895</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,9 +419,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$Entities_Intents.coverage" NAME="Entities_Intents Coverage Results" MODIFIED="1728843299432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
-    <SUITE FILE_PATH="coverage/NLP_Home_Automation$model_trainer.coverage" NAME="model_trainer Coverage Results" MODIFIED="1728790120820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Sentence_Classification_Model" />
+    <SUITE FILE_PATH="coverage/NLP_Home_Automation$model_trainer.coverage" NAME="model_trainer Coverage Results" MODIFIED="1729210126126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Sentence_Classification_Model" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$nlp_test.coverage" NAME="nlp_test Coverage Results" MODIFIED="1727841012545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
-    <SUITE FILE_PATH="coverage/NLP_Home_Automation$intent_prediction.coverage" NAME="intent_prediction Coverage Results" MODIFIED="1729208841505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
+    <SUITE FILE_PATH="coverage/NLP_Home_Automation$intent_prediction.coverage" NAME="intent_prediction Coverage Results" MODIFIED="1729210817980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$test.coverage" NAME="test Coverage Results" MODIFIED="1728848133283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$wakeword.coverage" NAME="wakeword Coverage Results" MODIFIED="1728853166281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$tools.coverage" NAME="tools Coverage Results" MODIFIED="1728847170231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />

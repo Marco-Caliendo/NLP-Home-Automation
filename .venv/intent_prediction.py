@@ -1,9 +1,11 @@
+#!/usr/bin/env python3
+
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import accuracy_score  # Import accuracy_score
+from sklearn.metrics import accuracy_score
 
 # Load the dataset from a CSV file
 data = pd.read_csv('intents_dataset.csv')
@@ -43,6 +45,6 @@ def predict_intent(command):
     return model.predict(command_vec)[0]
 
 # Example prediction
-command = "dim the lights"
+command = "dim the lights to 70 percent"
 predicted_intent = predict_intent(command)
 print(predicted_intent)  # Output the predicted intent

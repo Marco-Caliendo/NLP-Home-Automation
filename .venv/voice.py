@@ -64,4 +64,3 @@ def response(command):
         print("Im sorry I could not understand that")
     except sr.RequestError as e:
         print("Recognition error; {0}".format(e))
-

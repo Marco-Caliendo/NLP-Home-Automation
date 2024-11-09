@@ -4,6 +4,7 @@ from voice import listening, get_command
 from gpt import ai
 from command_classification import comclass
 import system_commands as sc
+import home_assistant as ha
 
 
 # Wake word is currently changed here
@@ -27,7 +28,7 @@ def text_only():
         if command_class == "CONVERSATION":
             ai(command)
         elif command_class == "AUTOMATION":
-            print("Executing command : " + command)
+            ha.execute_command(command)
         else:
             print("Error")
 
@@ -51,7 +52,7 @@ def main():
                 print(command)
                 ai(command)
             elif command_class == "AUTOMATION":
-                print("Executing command : " + command)
+                ha.execute_command(command)
             else:
                 print("Error")
 
@@ -60,5 +61,5 @@ def main():
 
 
 if __name__ == "__main__":
-    #main()
-    text_only()
+    main()
+    #text_only()

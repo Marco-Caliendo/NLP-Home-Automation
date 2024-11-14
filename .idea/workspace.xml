@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="Added header comments">
-      <change afterPath="$PROJECT_DIR$/.venv/home_assistant.py" afterDir="false" />
+    <list default="true" id="3e6fadf2-ebe7-43ba-a4c4-a5e938949e1b" name="Changes" comment="Added Home Assistant API requests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/gpt.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/llm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/home_assistant.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/home_assistant_module.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.venv/ppt_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/ppt_control.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +194,10 @@
       <workItem from="1731103467930" duration="1687000" />
       <workItem from="1731106860729" duration="751000" />
       <workItem from="1731122904568" duration="1232000" />
-      <workItem from="1731171658523" duration="1542000" />
+      <workItem from="1731171658523" duration="4685000" />
+      <workItem from="1731182558959" duration="146000" />
+      <workItem from="1731195376162" duration="786000" />
+      <workItem from="1731610982123" duration="257000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -385,7 +391,23 @@
       <option name="project" value="LOCAL" />
       <updated>1729212200562</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added Home Assistant API requests">
+      <option name="closed" value="true" />
+      <created>1731173247626</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1731173247626</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Added Home Assistant API requests">
+      <option name="closed" value="true" />
+      <created>1731174194337</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1731174194337</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +445,8 @@
     <MESSAGE value="Now has ability to control power point presentations" />
     <MESSAGE value="Fixed some bugs" />
     <MESSAGE value="Added header comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added header comments" />
+    <MESSAGE value="Added Home Assistant API requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Home Assistant API requests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$Entities_Intents.coverage" NAME="Entities_Intents Coverage Results" MODIFIED="1728843299432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
@@ -432,12 +455,12 @@
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$intent_prediction.coverage" NAME="intent_prediction Coverage Results" MODIFIED="1729210817980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$test.coverage" NAME="test Coverage Results" MODIFIED="1728848133283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$wakeword.coverage" NAME="wakeword Coverage Results" MODIFIED="1728853166281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
-    <SUITE FILE_PATH="coverage/NLP_Home_Automation$intent_prediction2.coverage" NAME="intent_prediction2 Coverage Results" MODIFIED="1729046877648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$tools.coverage" NAME="tools Coverage Results" MODIFIED="1728847170231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
+    <SUITE FILE_PATH="coverage/NLP_Home_Automation$intent_prediction2.coverage" NAME="intent_prediction2 Coverage Results" MODIFIED="1729046877648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$enitity_finder.coverage" NAME="enitity_finder Coverage Results" MODIFIED="1729130958547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$home_assistant.coverage" NAME="home_assistant Coverage Results" MODIFIED="1731173066054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$nlp_HA_test.coverage" NAME="nlp_HA_test Coverage Results" MODIFIED="1727845106339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
-    <SUITE FILE_PATH="coverage/NLP_Home_Automation$main.coverage" NAME="main Coverage Results" MODIFIED="1730076053194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
+    <SUITE FILE_PATH="coverage/NLP_Home_Automation$main.coverage" NAME="main Coverage Results" MODIFIED="1731182559563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$wakeword_testing.coverage" NAME="wakeword_testing Coverage Results" MODIFIED="1728853591326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/testing" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$keyboard_output.coverage" NAME="keyboard_output Coverage Results" MODIFIED="1729131475707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />
     <SUITE FILE_PATH="coverage/NLP_Home_Automation$command_classification.coverage" NAME="command_classification Coverage Results" MODIFIED="1728789812597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv" />

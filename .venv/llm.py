@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+import os
+from openai import OpenAI
+from openai.resources.audio import speech
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
@@ -13,7 +16,7 @@ if tokenizer.pad_token_id is None:
 
 first_input = True
 
-def ai(speech):
+def red_ai(speech):
     # encode the new user input, add the eos_token and return a tensor in Pytorch
     new_user_input_ids = tokenizer.encode(speech + tokenizer.eos_token, return_tensors='pt')
 
@@ -35,3 +38,22 @@ def ai(speech):
     # Print last output tokens from bot
     bot_response = tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
     print("Bot: {}".format(bot_response))
+
+def chat_gpt(speech):
+    client = OpenAI(
+        api_key=os.environ.get("OPENAI_API_KEY"),  # This is the default and can be omitted
+    )
+
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "user",
+                "content": speech,
+            }
+        ],
+        model="gpt-4o",
+    )
+
+
+
+chat_gpt("Say this is a test")

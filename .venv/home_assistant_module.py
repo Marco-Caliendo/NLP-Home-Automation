@@ -4,7 +4,7 @@ import requests
 
 url = "http://homeassistant.local:8123/api/conversation/process"
 headers = {
-    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI3MjExZTU0NDAyM2M0ZmZkYWQwYjQ5MzExMmY5NWZjYSIsImlhdCI6MTczMTE3MjA3NSwiZXhwIjoyMDQ2NTMyMDc1fQ.lFsUkcBn7AYmzAM0U2zQjPSMZ8X9zTM_rlUXMVL9u54",
+    "Authorization": "Bearer TOKEN", # Enter your token where it says TOKEN
     "Content-Type": "application/json"
 }
 
@@ -35,4 +35,3 @@ def execute_command(command):
     else:
         print("FAILED: ", response.text)
 
-execute_command("turn on the bedroom tv")

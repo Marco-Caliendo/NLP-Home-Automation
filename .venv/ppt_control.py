@@ -11,14 +11,17 @@ class PPT:
 
 
     def open_presentation(self, path):
-        # Set object to power point application
-        self.ppt_app = win32com.client.Dispatch("PowerPoint.Application")
-        # Open the presentation from the path
-        self.presentation = self.ppt_app.Presentations.Open(path)
-        # Make PowerPoint visible
-        self.ppt_app.Visible = True
-        # Show the presentation in full-screen mode
-        self.presentation.SlideShowSettings.Run()
+        try:
+            # Set object to power point application
+            self.ppt_app = win32com.client.Dispatch("PowerPoint.Application")
+            # Open the presentation from the path
+            self.presentation = self.ppt_app.Presentations.Open(path)
+            # Make PowerPoint visible
+            self.ppt_app.Visible = True
+            # Show the presentation in full-screen mode
+            self.presentation.SlideShowSettings.Run()
+        except:
+            print("I could not find the file")
 
 
     def next_slide(self):

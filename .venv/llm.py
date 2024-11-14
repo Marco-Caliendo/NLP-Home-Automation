@@ -5,7 +5,15 @@ from openai import OpenAI
 from openai.resources.audio import speech
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
+from dotenv import load_dotenv
 
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the environment variable for the openAI API key
+gpt_key = 'INPUT KEY HERE'
+#gpt_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"),)
+gpt_client = OpenAI(api_key=gpt_key, )
 
 tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-large")
 model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-large", )
@@ -39,21 +47,20 @@ def red_ai(speech):
     bot_response = tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
     print("Bot: {}".format(bot_response))
 
-def chat_gpt(speech):
-    client = OpenAI(
-        api_key=os.environ.get("OPENAI_API_KEY"),  # This is the default and can be omitted
-    )
 
-    chat_completion = client.chat.completions.create(
+def chat_gpt(speech):
+
+    chat_completion = gpt_client.chat.completions.create(
         messages=[
             {
                 "role": "user",
                 "content": speech,
             }
         ],
-        model="gpt-4o",
+        model="gpt-3.5-turbo",
     )
+    print(f"Assistant: {completion.choices[0].message.content}")
 
 
 
-chat_gpt("Say this is a test")
+chat_gpt("Say 'This is a test'")

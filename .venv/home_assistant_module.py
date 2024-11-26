@@ -1,6 +1,7 @@
 # This file manages requests to the Home Assistant Framework
 
 import requests
+import voice
 
 url = "http://homeassistant.local:8123/api/conversation/process"
 headers = {
@@ -27,11 +28,14 @@ def execute_command(command):
             response_data = response.json()
             speech_text = extract_response(response_data)
             if speech_text:
+                voice.response(speech_text)
                 print(speech_text)
             else:
+                voice.response("Speech response not found")
                 print("Speech response not found")
         except requests.exceptions.JSONDecodeError as e:
-            print("JSON decoding failed:", e)
+            voice.response("JSON decoding failed")
+            print("JSON decoding failed", e)
     else:
         print("FAILED: ", response.text)
 

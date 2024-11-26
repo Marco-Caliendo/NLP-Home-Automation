@@ -36,7 +36,7 @@ def text_only():
 # Main function that calls the speach to text module
 def main():
     while True:
-        if (listening(wake_word) == True):
+        if listening(wake_word) == True:
             # Get the command
             command = get_command()
 

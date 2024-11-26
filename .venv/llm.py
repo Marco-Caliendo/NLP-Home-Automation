@@ -5,10 +5,11 @@ from openai import OpenAI
 from openai.resources.audio import speech
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
-from dotenv import load_dotenv
+import voice
+#from dotenv import load_dotenv
 
 # Load environment variables from .env file
-load_dotenv()
+#load_dotenv()
 
 # Access the environment variable for the openAI API key
 gpt_key = 'INPUT KEY HERE'
@@ -45,7 +46,8 @@ def red_ai(speech):
 
     # Print last output tokens from bot
     bot_response = tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
-    print("Bot: {}".format(bot_response))
+    print(bot_response)
+    voice.response(bot_response)
 
 
 def chat_gpt(speech):
@@ -63,4 +65,4 @@ def chat_gpt(speech):
 
 
 
-chat_gpt("Say 'This is a test'")
+#chat_gpt("Say 'This is a test'")

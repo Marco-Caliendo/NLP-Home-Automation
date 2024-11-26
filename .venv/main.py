@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
 from voice import listening, get_command
-from gpt import ai
 from command_classification import comclass
 import system_commands as sc
+import home_assistant_module as ha
+import llm
 
 
 # Wake word is currently changed here
@@ -25,9 +26,9 @@ def text_only():
 
         # If conversation, send to AI chat module, else ,if automation, execute automation command, else return error
         if command_class == "CONVERSATION":
-            ai(command)
+            llm.red_ai(command)
         elif command_class == "AUTOMATION":
-            print("Executing command : " + command)
+            ha.execute_command(command)
         else:
             print("Error")
 
@@ -49,9 +50,9 @@ def main():
             # If conversation, send to AI chat module, else ,if automation, execute automation command, else return error
             if command_class == "CONVERSATION":
                 print(command)
-                ai(command)
+                llm.red_ai(command)
             elif command_class == "AUTOMATION":
-                print("Executing command : " + command)
+                ha.execute_command(command)
             else:
                 print("Error")
 

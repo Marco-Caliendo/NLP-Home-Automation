@@ -1,8 +1,19 @@
 #!/usr/bin/env python3
 
+import os
+from openai import OpenAI
+from openai.resources.audio import speech
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
+from dotenv import load_dotenv
 
+# Load environment variables from .env file
+load_dotenv()
+
+# Access the environment variable for the openAI API key
+gpt_key = 'INPUT KEY HERE'
+#gpt_client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"),)
+gpt_client = OpenAI(api_key=gpt_key, )
 
 tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-large")
 model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-large", )
@@ -13,7 +24,7 @@ if tokenizer.pad_token_id is None:
 
 first_input = True
 
-def ai(speech):
+def red_ai(speech):
     # encode the new user input, add the eos_token and return a tensor in Pytorch
     new_user_input_ids = tokenizer.encode(speech + tokenizer.eos_token, return_tensors='pt')
 
@@ -35,3 +46,21 @@ def ai(speech):
     # Print last output tokens from bot
     bot_response = tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True)
     print("Bot: {}".format(bot_response))
+
+
+def chat_gpt(speech):
+
+    chat_completion = gpt_client.chat.completions.create(
+        messages=[
+            {
+                "role": "user",
+                "content": speech,
+            }
+        ],
+        model="gpt-3.5-turbo",
+    )
+    print(f"Assistant: {completion.choices[0].message.content}")
+
+
+
+chat_gpt("Say 'This is a test'")
